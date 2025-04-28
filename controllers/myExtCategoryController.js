@@ -14,7 +14,7 @@ module.exports.createExtCat = async (req, res) => {
     const image = req.file ? req.file.filename : null;
 
     if (!categoryId || !subcategoryId) {
-      return res.send("Please select both Category and Sub-Category.");
+      return res.send("Please select Category and SubCategory.");
     }
 
     const newExtCat = new extCategoryModel({

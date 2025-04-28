@@ -6,7 +6,7 @@ module.exports.createSubCat = async (req, res) => {
     const { name, categoryId } = req.body;
 
     if (!categoryId) {
-      return res.send("Please select a category before adding a sub-category.");
+      return res.send("select category before adding a subCategory.");
     }
 
     const newSubCat = new subCategoryModel({
@@ -18,7 +18,7 @@ module.exports.createSubCat = async (req, res) => {
     console.log("Sub category created...!");
     res.redirect("/admin/form");
   } catch (error) {
-    console.log("Error creating sub-category:", error.message);
+    console.log("Error creating subCategory:", error.message);
     res.redirect("/admin/form");
   }
 };

@@ -31,7 +31,7 @@ passport.deserializeUser(async (id, done) => {
   }
 });
 
-// Route protection middleware
+
 passport.userAuth = (req, res, next) => {
   if (req.isAuthenticated()) return next();
   return res.redirect("/admin/login");
